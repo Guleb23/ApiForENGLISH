@@ -22,18 +22,18 @@ namespace ApiForENGLISH
 
             builder.Services.AddDbContext<ApplicationDBContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection"));
+                options.UseNpgsql("Server=147.45.108.218;Port=5432;Database=default_db;User Id=gen_user;Password=qhBErM:1H?OsD+;");
             });
 
             var app = builder.Build();
-           
-            app.UseCors(options =>
-            {
-                options.WithOrigins("http://localhost:3000").
-                AllowAnyHeader().
-                AllowCredentials().
-                AllowAnyMethod();
-            });
+            app.UseHttpsRedirection();
+            //app.UseCors(options =>
+            //{
+            //    options.WithOrigins("http://localhost:3000").
+            //    AllowAnyHeader().
+            //    AllowCredentials().
+            //    AllowAnyMethod();
+            //});
             app.MapHub<ChatHub.ChatHub>("/chat");
 
             app.UseStaticFiles(new StaticFileOptions
