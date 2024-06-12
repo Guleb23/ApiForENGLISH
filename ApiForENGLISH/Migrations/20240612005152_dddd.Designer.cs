@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ApiForENGLISH.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240612000530_da")]
-    partial class da
+    [Migration("20240612005152_dddd")]
+    partial class dddd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,11 +34,11 @@ namespace ApiForENGLISH.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<int>("Score")
                         .HasColumnType("integer");
@@ -68,27 +68,27 @@ namespace ApiForENGLISH.Migrations
 
                     b.Property<string>("Image")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Option1")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Option2")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Option3")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("Option4")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.Property<string>("QnInWords")
                         .IsRequired()
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("text");
 
                     b.HasKey("QuetId");
 

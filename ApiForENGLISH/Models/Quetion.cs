@@ -8,17 +8,17 @@ namespace ApiForENGLISH.Models
         [Key]
         public int QuetId { get; set; }
 
-        [Column(TypeName="nvarchar(50)")]
+        [Column(TypeName="text")]
         public string QnInWords { get; set; }
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Image { get; set; }
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Option1 { get; set; }
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Option2 { get; set; }
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Option3 { get; set; }
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Option4 { get; set; }
 
         public int Answer { get; set; }

@@ -8,10 +8,10 @@ namespace ApiForENGLISH.Models
         [Key]
         public int ParticipantId { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Email { get; set; }
 
-        [Column(TypeName = "nvarchar(50)")]
+        [Column(TypeName = "text")]
         public string Name { get; set; }
 
         public int Score { get; set; }
