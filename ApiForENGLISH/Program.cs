@@ -27,13 +27,13 @@ namespace ApiForENGLISH
 
             var app = builder.Build();
             app.UseHttpsRedirection();
-            //app.UseCors(options =>
-            //{
-            //    options.WithOrigins("http://localhost:3000").
-            //    AllowAnyHeader().
-            //    AllowCredentials().
-            //    AllowAnyMethod();
-            //});
+            app.UseCors(options =>
+            {
+                options.WithOrigins("http://localhost:3000").
+                AllowAnyHeader().
+                AllowCredentials().
+                AllowAnyMethod();
+            });
             app.MapHub<ChatHub.ChatHub>("/chat");
 
             app.UseStaticFiles(new StaticFileOptions
